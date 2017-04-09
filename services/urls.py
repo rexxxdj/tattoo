@@ -3,5 +3,5 @@ from django.contrib import admin
 from services import views
 
 urlpatterns = [
-	url(r'^$',views.service_list,name='service'),
+	url(r'^$',views.service_list, name='service'),
 ]

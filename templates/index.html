@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav navbar-left">
                     <li class="active" role="presentation">
-                        <a href="index.html">Главная </a>
+                        <a href="/">Главная </a>
                     </li>
                     <li role="presentation">
                         <a href="#about">О нас</a>
@@ -55,7 +55,7 @@
                         <a href="#gallery">Галерея</a>
                     </li>
                     <li role="presentation">
-                        <a href="blog.html">Блог</a>
+                        <a href="/blog">Блог</a>
                     </li>
                     <li role="presentation">
                         <a href="#contacts">Контакты</a>
@@ -125,48 +125,22 @@
                 <h2 class="text-center">Наша команда</h2>
             </div>
             <div class="row people">
+                {% for person in team %}
                 <div class="col-md-4 col-sm-6 item">
                     <div class="box">
-                        <img class="img-circle" src="{% static "img/1.jpg" %}">
-                        <h3 class="name">Ben Johnson</h3>
-                        <p class="title">Musician</p>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
+                        <img class="img-circle" src="{% static person.photo %}">
+                        <h3 class="name">{{ person.name }}</h3>
+                        <p class="title">{{ person.title }}</p>
+                        <p class="description">{{ prson.description }}</p>
                         <div class="social">
-                            <a href="#"><i class="fa fa-vk"></i></a>
-                            <a href="#"><i class="fa fa-facebook-official"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="{{ person.vk }}"><i class="fa fa-vk"></i></a>
+                            <a href="{{ person.facebook }}"><i class="fa fa-facebook-official"></i></a>
+                            <a href="{{ person.twitter }}"><i class="fa fa-twitter"></i></a>
+                            <a href="{{ person.instagram }}"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 item">
-                    <div class="box">
-                        <img class="img-circle" src="{% static "img/2.jpg" %}">
-                        <h3 class="name">Emily Clark</h3>
-                        <p class="title">Artist</p>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                        <div class="social">
-                            <a href="#"><i class="fa fa-vk"></i></a>
-                            <a href="#"><i class="fa fa-facebook-official"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 item">
-                    <div class="box">
-                        <img class="img-circle" src="{% static "img/3.jpg" %}">
-                        <h3 class="name">Carl Kent</h3>
-                        <p class="title">Stylist</p>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                        <div class="social">
-                            <a href="#"><i class="fa fa-vk"></i></a>
-                            <a href="#"><i class="fa fa-facebook-official"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -176,34 +150,15 @@
                 <h2 class="text-center">Услуги</h2>
             </div>
             <div class="row projects">
+                {% for service in services %}
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-                    <a href="services.html">
-                        <img class="img-responsive" src="{% static "img/service_tatoo.jpg" %}">
-                        <h3 class="name">Художественная Татуировка </h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
+                    <a href="/services">
+                        <img class="img-responsive" src="{% static service.image %}">
+                        <h3 class="name">{{ service.name }} </h3>
+                        <p class="description">{{ service.description }}</p>
                     </a>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-                    <a href="services.html">
-                        <img class="img-responsive" src="{% static "img/service_tatooag.jpg" %}">
-                        <h3 class="name">Татуаж</h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                    </a>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-                    <a href="services.html">
-                        <img class="img-responsive" src="{% static "img/service_micro.jpg" %}">
-                        <h3 class="name">Микроблейдинг </h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                    </a>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-                    <a href="services.html">
-                        <img class="img-responsive" src="{% static "img/service_pircing.jpg" %}">
-                        <h3 class="name">Пирсинг </h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                    </a>
-                </div>
+                {% endfor %}                
             </div>
         </div>
     </div>
@@ -213,39 +168,16 @@
                 <h2 class="text-center">Наши работы</h2>
             </div>
             <div class="row photos">
+                {% for tatoo in gallery %}
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="{% static "img/tatoo/bear.jpg" %}" data-lightbox="photos">
-                        <img class="img-responsive" src="{% static "img/tatoo/bear.jpg" %}">
+                    <a href="{% static tatoo.photo %}" data-lightbox="photos">
+                        <img class="img-responsive" src="{% static tatoo.photo %}">
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="{% static "img/tatoo/october.jpg" %}" data-lightbox="photos">
-                        <img class="img-responsive" src="{% static "img/tatoo/october.jpg" %}">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="{% static "img/tatoo/clock.jpg" %}" data-lightbox="photos">
-                        <img class="img-responsive" src="{% static "img/tatoo/clock.jpg" %}">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="{% static "img/tatoo/polka.jpg" %}" data-lightbox="photos">
-                        <img class="img-responsive" src="{% static "img/tatoo/polka.jpg" %}">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="{% static "img/tatoo/samurai.jpg" %}" data-lightbox="photos">
-                        <img class="img-responsive" src="{% static "img/tatoo/samurai.jpg" %}">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="{% static "img/tatoo/volna.jpg" %}" data-lightbox="photos">
-                        <img class="img-responsive" src="{% static "img/tatoo/volna.jpg" %}">
-                    </a>
-                </div>
+                {% endfor %}
             </div>
             <div class="buttons">
-                <a class="btn btn-default btn-lg" role="button" href="gallery.html">Перейти в галерею</a>
+                <a class="btn btn-default btn-lg" role="button" href="/gallery">Перейти в галерею</a>
             </div>
         </div>
     </div>

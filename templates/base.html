@@ -1,29 +1,30 @@
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tatoo</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
-    <link rel="stylesheet" href="fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="fonts/ionicons.min.css">
-    <link rel="stylesheet" href="css/Article-Clean.css">
-    <link rel="stylesheet" href="css/Article-List.css">
-    <link rel="stylesheet" href="css/Carousel-Hero.css">
-    <link rel="stylesheet" href="css/Features-Boxed.css">
-    <link rel="stylesheet" href="css/Highlight-Blue.css">
+    <link rel="stylesheet" href="{% static "fonts/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "fonts/ionicons.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/Article-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "css/Article-List.css" %}">
+    <link rel="stylesheet" href="{% static "css/Carousel-Hero.css" %}">
+    <link rel="stylesheet" href="{% static "css/Features-Boxed.css" %}">
+    <link rel="stylesheet" href="{% static "css/Highlight-Blue.css" %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <link rel="stylesheet" href="css/Lightbox-Gallery.css">
-    <link rel="stylesheet" href="css/Pretty-Footer.css">
-    <link rel="stylesheet" href="css/Map-Clean.css">
-    <link rel="stylesheet" href="css/Navigation-with-Button1.css">
-    <link rel="stylesheet" href="css/Newsletter-Subscription-Form.css">
-    <link rel="stylesheet" href="css/Projects-Clean.css">
-    <link rel="stylesheet" href="css/Social-Icons.css">    
-    <link rel="stylesheet" href="css/Team-Boxed.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{% static "css/Lightbox-Gallery.css" %}">
+    <link rel="stylesheet" href="{% static "css/Pretty-Footer.css" %}">
+    <link rel="stylesheet" href="{% static "css/Map-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "css/Navigation-with-Button1.css" %}">
+    <link rel="stylesheet" href="{% static "css/Newsletter-Subscription-Form.css" %}">
+    <link rel="stylesheet" href="{% static "css/Projects-Clean.css" %}">
+    <link rel="stylesheet" href="{% static "css/Social-Icons.css" %}">    
+    <link rel="stylesheet" href="{% static "css/Team-Boxed.css" %}">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -39,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav navbar-left">
                     <li class="active" role="presentation">
-                        <a href="index.html">Главная </a>
+                        <a href="/">Главная </a>
                     </li>
                     <li role="presentation">
                         <a href="#about">О нас</a>
@@ -54,7 +55,7 @@
                         <a href="#gallery">Галерея</a>
                     </li>
                     <li role="presentation">
-                        <a href="blog.html">Блог</a>
+                        <a href="/blog">Блог</a>
                     </li>
                     <li role="presentation">
                         <a href="#contacts">Контакты</a>
@@ -67,18 +68,18 @@
         <div class="carousel-inner" role="listbox">
             <div class="item">
                 <div class="jumbotron hero-nature carousel-hero">
-                    <h1 class="hero-title"><img src="img/logo-main-page (2).png"></h1>
+                    <h1 class="hero-title"><img src="{% static "img/logo-main-page (2).png" %}"></h1>
                 </div>
             </div>
             <div class="item">
                 <div class="jumbotron hero-photography carousel-hero">
-                    <h1 class="hero-title"><img src="img/logo-main-page (2).png"></h1>
+                    <h1 class="hero-title"><img src="{% static "img/logo-main-page (2).png" %}"></h1>
                     <p></p>
                 </div>
             </div>
             <div class="item active">
                 <div class="jumbotron hero-technology carousel-hero">
-                    <h1 class="hero-title"><img src="img/logo-main-page (2).png"></h1>
+                    <h1 class="hero-title"><img src="{% static "img/logo-main-page (2).png" %}"></h1>
                     <p></p>
                 </div>
             </div>
@@ -105,13 +106,13 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="intro">
                         <h1 class="text-center">Немного о нашем салоне</h1>
-                        <img class="img-responsive" src="img/maxresdefault.jpg">
+                        <img class="img-responsive" src="{% static "img/maxresdefault.jpg" %}">
                     </div>
                     <div class="text">
                         <p><strong>Тату салону «Бриллиантовая рука» уже более 20 лет! </strong></p>
                         <p>Это первый и самый известный салон татуировок в Харькове, который выражает душу на теле. «Бриллиантовая рука» нашего мастера создаст на вашем теле шедевр, который подчеркнет вашу индивидуальность, квалифицированно выполнит татуаж губ, перманентный макияж бровей, глаз. &nbsp;</p>
                         <p>У нас вы можете безболезненно и безопасно проколоть уши или язык, сделать пирсинг пупка, носа, губы, брови, сосков, ушей. </p>
-                        <figure><img src="img/z_d8119d91.jpg"></figure>
+                        <figure><img src="{% static "img/z_d8119d91.jpg" %}"></figure>
                         <p>Мы деликатно и конфиденциально делаем интимный пирсинг и татуировки. Вы можете заранее просмотреть каталог татуировок, галерею тату рисунков, выбрать пирсинг украшения, эскизы и фото татуировок на любой вкус - иероглифы, кельтские узоры, надписи, драконы, кошки, бабочки, волки, ангелы, крылья, тигры </p>
                     </div>
                 </div>
@@ -126,7 +127,7 @@
             <div class="row people">
                 <div class="col-md-4 col-sm-6 item">
                     <div class="box">
-                        <img class="img-circle" src="img/1.jpg">
+                        <img class="img-circle" src="{% static "img/1.jpg" %}">
                         <h3 class="name">Ben Johnson</h3>
                         <p class="title">Musician</p>
                         <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
@@ -140,7 +141,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 item">
                     <div class="box">
-                        <img class="img-circle" src="img/2.jpg">
+                        <img class="img-circle" src="{% static "img/2.jpg" %}">
                         <h3 class="name">Emily Clark</h3>
                         <p class="title">Artist</p>
                         <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
@@ -154,7 +155,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 item">
                     <div class="box">
-                        <img class="img-circle" src="img/3.jpg">
+                        <img class="img-circle" src="{% static "img/3.jpg" %}">
                         <h3 class="name">Carl Kent</h3>
                         <p class="title">Stylist</p>
                         <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
@@ -176,29 +177,29 @@
             </div>
             <div class="row projects">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-                    <a href="services.html">
-                        <img class="img-responsive" src="img/service_tatoo.jpg">
+                    <a href="/services">
+                        <img class="img-responsive" src="{% static "img/service_tatoo.jpg" %}">
                         <h3 class="name">Художественная Татуировка </h3>
                         <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-                    <a href="services.html">
-                        <img class="img-responsive" src="img/service_tatooag.jpg">
+                    <a href="/services">
+                        <img class="img-responsive" src="{% static "img/service_tatooag.jpg" %}">
                         <h3 class="name">Татуаж</h3>
                         <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-                    <a href="services.html">
-                        <img class="img-responsive" src="img/service_micro.jpg">
+                    <a href="/services">
+                        <img class="img-responsive" src="{% static "img/service_micro.jpg" %}">
                         <h3 class="name">Микроблейдинг </h3>
                         <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-                    <a href="services.html">
-                        <img class="img-responsive" src="img/service_pircing.jpg">
+                    <a href="/services">
+                        <img class="img-responsive" src="{% static "img/service_pircing.jpg" %}">
                         <h3 class="name">Пирсинг </h3>
                         <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                     </a>
@@ -213,38 +214,38 @@
             </div>
             <div class="row photos">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="img/tatoo/bear.jpg" data-lightbox="photos">
-                        <img class="img-responsive" src="img/tatoo/bear.jpg">
+                    <a href="{% static "img/tatoo/bear.jpg" %}" data-lightbox="photos">
+                        <img class="img-responsive" src="{% static "img/tatoo/bear.jpg" %}">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="img/tatoo/october.jpg" data-lightbox="photos">
-                        <img class="img-responsive" src="img/tatoo/october.jpg">
+                    <a href="{% static "img/tatoo/october.jpg" %}" data-lightbox="photos">
+                        <img class="img-responsive" src="{% static "img/tatoo/october.jpg" %}">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="img/tatoo/clock.jpg" data-lightbox="photos">
-                        <img class="img-responsive" src="img/tatoo/clock.jpg">
+                    <a href="{% static "img/tatoo/clock.jpg" %}" data-lightbox="photos">
+                        <img class="img-responsive" src="{% static "img/tatoo/clock.jpg" %}">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="img/tatoo/polka.jpg" data-lightbox="photos">
-                        <img class="img-responsive" src="img/tatoo/polka.jpg">
+                    <a href="{% static "img/tatoo/polka.jpg" %}" data-lightbox="photos">
+                        <img class="img-responsive" src="{% static "img/tatoo/polka.jpg" %}">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="img/tatoo/samurai.jpg" data-lightbox="photos">
-                        <img class="img-responsive" src="img/tatoo/samurai.jpg">
+                    <a href="{% static "img/tatoo/samurai.jpg" %}" data-lightbox="photos">
+                        <img class="img-responsive" src="{% static "img/tatoo/samurai.jpg" %}">
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 item">
-                    <a href="img/tatoo/volna.jpg" data-lightbox="photos">
-                        <img class="img-responsive" src="img/tatoo/volna.jpg">
+                    <a href="{% static "img/tatoo/volna.jpg" %}" data-lightbox="photos">
+                        <img class="img-responsive" src="{% static "img/tatoo/volna.jpg" %}">
                     </a>
                 </div>
             </div>
             <div class="buttons">
-                <a class="btn btn-default btn-lg" role="button" href="gallery.html">Перейти в галерею</a>
+                <a class="btn btn-default btn-lg" role="button" href="/gallery">Перейти в галерею</a>
             </div>
         </div>
     </div>
@@ -297,8 +298,8 @@
         <a href="#"><i class="icon ion-social-googleplus"></i></a>
         <a href="#"><i class="icon ion-social-youtube"></i></a>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 </body>
 </html>
