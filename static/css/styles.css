@@ -1,0 +1,133 @@
+.navbar-inverse {
+  background-image:none;
+  background-color:#000;
+}
+
+.article-clean {
+  background-color:#000;
+  color:#fff;
+}
+
+.text-center {
+  color:#fff;
+}
+
+.features-boxed {
+  background-color:#000;
+}
+
+.intro {
+  color:#fff;
+}
+
+body {
+  background-color:#000;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color:#fff;
+}
+
+h3.name {
+  color:#fff;
+}
+
+p.description {
+  color:#8c8b8b;
+}
+
+div.buttons {
+  text-align:center;
+  color:#ebeff1;
+  text-shadow:none;
+  background:transparent;
+  transition:background-color 0.25s;
+}
+
+a.btn.btn-default.btn-lg {
+  width:300px;
+}
+
+img.img-responsive {
+  align-content:center;
+}
+
+img.img-responsive {
+  display:initial;
+}
+
+a:hover {
+  text-decoration:none;
+}
+
+.breadcrumb {
+  background-color:#000;
+}
+
+.pagination > li > a {
+  background-color:#000;
+  border-color:#000;
+  color:#fff;
+}
+
+.pagination > li > a.active {
+  background-color:#fff;
+}
+
+.pagination > li.active > a {
+  background-color:#33383b;
+  border-color:#33383b;
+}
+
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+  background-color:#33383b;
+  color:#fff;
+  cursor:pointer;
+  border-color:#33383b;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  background-color:#33383b;
+  cursor:pointer;
+  border-color:#33383b;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a {
+  background-image:none;
+}
+
+.active {
+  border-bottom:1px solid white;
+}
+
+.contacts {
+  margin-top:50px;
+}
+
+.control-label {
+  color:#fff;
+}
+
+i.glyphicon.glyphicon-circle-arrow-right {
+  font-weight:800;
+  line-height:3;
+  font-size:25px;
+}
+
+a {
+  color:#fff;
+}
+
+a:focus, a:hover {
+  color:#fff;
+  text-decoration:none;
+}
+
+div.article-clean {
+  margin-top:50px;
+}
+
+.autor {
+  color:#fff;
+}
+
