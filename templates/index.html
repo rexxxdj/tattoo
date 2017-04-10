@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -153,9 +153,9 @@
                 {% for service in services %}
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
                     <a href="/services">
-                        <img class="img-responsive" src="{% static service.image %}">
+                        <img class="img-responsive" src="/media/{{ service.image }}">
                         <h3 class="name">{{ service.name }} </h3>
-                        <p class="description">{{ service.description }}</p>
+                        <p class="description">{{ service.small_desc }}</p>
                     </a>
                 </div>
                 {% endfor %}                
@@ -190,7 +190,9 @@
                 <p class="text-center">Моб.тел. +38 097 532-38-99 </p>
             </div>
         </div>
-        <iframe allowfullscreen="" frameborder="0" width="100%" height="450" src="https://www.google.com/maps/embed/v1/place?key=+AIzaSyC6r58Is4jdTYlZ-ot44hA_k1y7prZGQCk+&amp;q=%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%2C+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0%2C%D1%83%D0%BB.%D0%A1%D1%83%D0%BC%D1%81%D0%BA%D0%B0%D1%8F%2C4&amp;zoom=15"></iframe>
+        <div class="container">
+            <iframe allowfullscreen="" frameborder="0" width="100%" height="450" src="https://www.google.com/maps/embed/v1/place?key=+AIzaSyC6r58Is4jdTYlZ-ot44hA_k1y7prZGQCk+&amp;q=%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%2C+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0%2C%D1%83%D0%BB.%D0%A1%D1%83%D0%BC%D1%81%D0%BA%D0%B0%D1%8F%2C4&amp;zoom=15"></iframe>
+        </div>
         <div class="buttons">
             <a class="btn btn-default btn-lg" role="button" href="contacts.html">Обратная связь</a>
         </div>
@@ -220,6 +222,10 @@
                     <p> <a href="#" target="_blank">support@tattoo.kharkov.com</a></p>
                 </div>
             </div>
+            <div class="col-md-4 col-sm-6"><img style="max-width: 450px;
+                background-color: white;
+                margin-right: 30px;" 
+                src="{% static "img/logo-main-page (2).png" %}"></div>
             <div class="clearfix visible-sm-block"></div>
         </div>
     </footer>

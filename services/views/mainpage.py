@@ -4,29 +4,11 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from ..models import Services
+
 def main_page(request):
-    services = (
-    	{'id': 1,
-    	'name': u'Художественная татуировка',
-    	'description': u'Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.',
-		'image' : 'img/service_tatoo.jpg'
-		},
-		{'id': 2,
-		'name': u'Татуаж',
-		'description': u'Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.',
-		'image' : 'img/service_tatooag.jpg'
-		},
-		{'id': 3,
-		'name': u'Микроблейдинг',
-		'description': u'Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.',
-		'image' : 'img/service_micro.jpg'
-		},
-		{'id': 4,
-		'name': u'Пирсинг',
-		'description': u'Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.',
-		'image' : 'img/service_pircing.jpg'
-		}
-		)
+    services = Services.objects.all()
+
     team = (
 		{'id': 1,
 		'name': u'Ben Johnson',
@@ -82,8 +64,3 @@ def main_page(request):
     return render(request, 'index.html', 
     	{'services': services, 'team': team, 
     	'gallery': gallery})
-
-def service_list(request):
-	return render(request, 'services.html', {})
-
-# Create your views here.
